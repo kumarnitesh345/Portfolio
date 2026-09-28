@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    background-color: #040d09;
+    color: #f0fdf4;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  /* Custom subtle emerald scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #040d09;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #133829;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 223, 129, 0.2);
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #00df81;
+  }
+}
+
+/* Subtle engineering grid with emerald tint */
+.bg-grid-pattern {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(0, 223, 129, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 223, 129, 0.04) 1px, transparent 1px);
+}
+
+.bg-dot-matrix {
+  background-size: 16px 16px;
+  background-image: radial-gradient(rgba(0, 223, 129, 0.15) 1.5px, transparent 1.5px);
+}
+
+/* Glassmorphism card styles matching the design screenshot */
+.card-emerald {
+  background: rgba(8, 26, 20, 0.78);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(0, 223, 129, 0.2);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-emerald:hover {
+  transform: translateY(-4px);
+  border-color: rgba(0, 223, 129, 0.55);
+  box-shadow: 0 14px 30px -10px rgba(0, 223, 129, 0.2);
+}
+
+/* Circular ring decorative rotation */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 25s linear infinite;
+}
