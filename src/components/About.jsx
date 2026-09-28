@@ -48,14 +48,24 @@ export default function About() {
               <span>Engineering Scalable &amp; Reliable Software</span>
             </div>
 
-            {/* Recruiter-friendly bio */}
-            <p className="text-base sm:text-lg text-stone-200 leading-relaxed mb-4 font-normal">
-              {resumeData.personal.aboutLong}
-            </p>
-
-            <p className="text-sm text-stone-300 leading-relaxed mb-8">
-              With a strong engineering discipline from Haldia Institute of Technology and hands-on SDET corporate training with Wipro, I bridge the gap between fast-paced feature development and rock-solid quality assurance. I am eager to contribute to innovative software engineering teams where performance, scalability, and code excellence matter.
-            </p>
+            {/* Recruiter-friendly bio in 3 distinct paragraphs */}
+            <div className="space-y-4 mb-8">
+              {(Array.isArray(resumeData.personal.aboutLong)
+                ? resumeData.personal.aboutLong
+                : resumeData.personal.aboutLong.split('\n\n')
+              ).map((paragraph, idx) => (
+                <p
+                  key={idx}
+                  className={`leading-relaxed ${
+                    idx === 0
+                      ? 'text-base sm:text-lg text-stone-200 font-normal'
+                      : 'text-sm sm:text-base text-stone-300'
+                  }`}
+                >
+                  {paragraph}
+                </p>
+              ))}
+            </div>
 
             {/* Value Highlights Cards */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8 w-full">
