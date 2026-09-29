@@ -57,9 +57,9 @@ export default function About() {
                 <p
                   key={idx}
                   className={`leading-relaxed ${
-                    idx === 0
-                      ? 'text-base sm:text-lg text-stone-200 font-normal'
-                      : 'text-sm sm:text-base text-stone-300'
+                    idx === 2
+                      ? 'text-base sm:text-lg text-stone-300 italic font-normal'
+                      : 'text-base sm:text-lg text-stone-200 font-normal'
                   }`}
                 >
                   {paragraph}
