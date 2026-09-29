@@ -1,4 +1,4 @@
-# Nitesh Kumar — Cyber-Emerald Developer Portfolio
+# Nitesh Kumar — Developer Portfolio
 
 A production-quality developer portfolio website built for **Nitesh Kumar**, Software Engineer & Full Stack Developer with deep expertise in Test Automation and Scalable Systems. Built using **React + Vite**, **Tailwind CSS**, **Framer Motion**, and **Lucide React**.
 
